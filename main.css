@@ -1,0 +1,104 @@
+* {
+  cursor: url('mis.png'), auto;
+  font-family: "Sofia", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("pozadina.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fade-out {
+  animation: fadeOutProgress 2s forwards;
+}
+
+@keyframes fadeOutProgress {
+  0% { opacity: 1; }
+  25% { opacity: 0.8; }
+  50% { opacity: 0.6; }
+  75% { opacity: 0.3; }
+  100% { opacity: 0; }
+}
+
+.valentine-box {
+  border: 3px solid white;
+  margin-top: 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: pink;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valentine-box h1 {
+  color: white;
+  font-size: 2em;
+  text-shadow: 0px 0px 5px black;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Razdvaja dugmadi */
+  width: 100%;
+  gap:0; /* Ukloni razmak između dugmadi */
+  margin-top: 10px;
+}
+.ne{
+  margin-left:250px;
+}
+button {
+  width: 200px;
+  height: 70px;
+  background-color: #BB96CA;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 18px;
+  transition: border-color 0.3s ease-in-out;
+  position:relative;
+}
+
+button:hover {
+  border-color: red;
+}
+
+#demo {
+  font-size: 35px;
+  color: white;
+  text-shadow: 0 0 3px black;
+  width: 310px;
+  height: 65px;
+  background-color: pink;
+  border: 2px solid white;
+  margin-top: 20px;
+}
